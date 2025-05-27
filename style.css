@@ -1,0 +1,140 @@
+/* Global Styles & Dark Theme */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: #141414;
+    color: #e5e5e5;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh; 
+}
+
+/* Basic Structure Styling - Header, Nav, Logo from Subtask 4 */
+header {
+    background-color: #111; 
+    padding: 10px 50px; 
+    min-height: 70px; 
+    border-bottom: 1px solid #333; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e50914; /* Netflix Red */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+nav ul li a:hover {
+    color: #b3b3b3; 
+}
+
+/* Main content area basic style */
+main {
+    padding: 20px;
+}
+
+/* Content Row Styling - From Current Subtask */
+.content-row {
+    margin-bottom: 30px;
+}
+
+.content-row h2 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    color: #e5e5e5;
+}
+
+.thumbnails-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px; /* Space for scrollbar */
+}
+
+/* Scrollbar Styling (Webkit) */
+.thumbnails-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.thumbnails-container::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+.thumbnails-container::-webkit-scrollbar-track {
+    background-color: transparent; 
+}
+
+.thumbnail {
+    width: 180px;
+    height: 270px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border: 1px solid #222; 
+    position: relative; 
+    display: flex; 
+    align-items: flex-end; 
+    overflow: hidden; 
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    border-color: #fff; /* Brighter border on hover */
+    cursor: pointer; /* Indicate it's clickable */
+}
+
+.thumbnail:last-child {
+    margin-right: 0; 
+}
+
+.thumbnail-title {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: #e5e5e5;
+    padding: 5px 8px; 
+    font-size: 0.8em;
+    width: 100%; 
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+/* Footer Styling */
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 50px; 
+    border-top: 1px solid #333; 
+}
